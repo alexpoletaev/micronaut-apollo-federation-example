@@ -1,0 +1,16 @@
+type Query {
+    reviews: [Review]
+    reviewsByProductSku(sku: String!): [Review]
+}
+
+type Review @key(fields: "id"){
+    id: String!
+    text: String!
+    mark: Float
+    productSku: String!
+}
+
+type Product @key(fields: "sku") @extends {
+    sku: String! @external
+    reviews(filter: String): [Review]
+}

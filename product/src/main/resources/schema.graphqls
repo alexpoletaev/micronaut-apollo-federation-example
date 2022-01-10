@@ -1,0 +1,10 @@
+type Query {
+    productBySku(sku: String!, filter: String): Product
+    products: [Product]
+}
+
+type Product @key(fields: "sku") {
+    sku: String!
+    name: String!
+    price: Float
+}
