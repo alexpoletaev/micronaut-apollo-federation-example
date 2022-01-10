@@ -1,0 +1,3 @@
+task build {
+    dependsOn ':product:build', ':review:build'
+}

@@ -1,0 +1,4 @@
+rootProject.name = 'micronaut-apollo-federation-example'
+include 'product'
+include 'review'
+
